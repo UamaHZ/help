@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">新版抢红包</string>
+    <string name="accessibility_tip">新版抢红包</string>
+    <string name="accessibility_desc">开启辅助功能，让您的红包快人一步</string>
+</resources>

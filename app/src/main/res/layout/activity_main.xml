@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="15dp"
+    tools:context=".MainActivity">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="配置项："
+        android:textSize="20sp"
+        android:textColor="#333"
+        android:id="@+id/tx_config"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="(以下是一些自动配置)"
+        android:textSize="12sp"
+        android:textColor="#333"
+        app:layout_constraintTop_toTopOf="@id/tx_config"
+        app:layout_constraintBottom_toBottomOf="@id/tx_config"
+        app:layout_constraintLeft_toRightOf="@id/tx_config"
+        />
+    <CheckBox
+        android:id="@+id/checkbox_close"
+        app:layout_constraintTop_toBottomOf="@id/tx_config"
+        android:layout_marginTop="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="15sp"
+        android:text="自动关闭红包详情页？"
+        android:checked="true"/>
+
+    <CheckBox
+        android:id="@+id/check_info"
+        app:layout_constraintTop_toBottomOf="@id/checkbox_close"
+        android:layout_marginTop="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:textSize="15sp"
+        android:text="仅自动抢群红包？"
+        android:checked="false"/>
+
+    <CheckBox
+        android:id="@+id/check_open"
+        app:layout_constraintTop_toBottomOf="@id/check_info"
+        android:layout_marginTop="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="15sp"
+        android:text="是否启动微信抢红包"
+        android:checked="true"/>
+
+    <TextView
+        android:id="@+id/tx_notice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="注意事项:"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        android:layout_marginTop="20sp"
+        app:layout_constraintTop_toBottomOf="@id/check_open"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="1：支持微信后台抢红包需要能接收到微信详细消息、\n2：暂不支持锁屏|息屏抢红包、\n3：抢红包无效时，请尝试重启本软件"
+        android:textStyle="bold"
+        android:textSize="14sp"
+        android:layout_marginTop="14sp"
+        app:layout_constraintTop_toBottomOf="@id/tx_notice"/>
+</android.support.constraint.ConstraintLayout>
